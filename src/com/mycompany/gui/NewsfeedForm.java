@@ -134,7 +134,14 @@ public class NewsfeedForm extends BaseForm {
         });
           
           
-            
+             popular.addActionListener((e) -> {
+               InfiniteProgress ip = new InfiniteProgress();
+        final Dialog ipDlg = ip.showInifiniteBlocking();
+        
+          AjoutEventForm a = new AjoutEventForm(res);
+           a.show();
+            refreshTheme();
+        });
           featured.addActionListener((e) -> {
                InfiniteProgress ip = new InfiniteProgress();
         final Dialog ipDlg = ip.showInifiniteBlocking();
